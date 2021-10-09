@@ -6,8 +6,50 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'>
 
         <title>IMC</title>
+
+        <link href="./style/globals.css" rel="stylesheet"/>
+        <link href="./style/home.css" rel="stylesheet"/>
     </head>
     <body>
-        
+        <main id="main" role="main">
+            <div class="position">
+                <div class="switch">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <h1 id="title">Calculadora IMC</h1>
+            <span id="text-result">Resultado</span>
+            <form id="form-inputs">
+                <div class="area-input">
+                    <img
+                        class="icon-input"
+                        src="./assets/icon-weight.svg"
+                        alt="icon weight"
+                    />
+                    <input 
+                    id="weight" 
+                    class="input-imc" 
+                    type="text"
+                    placeholder="Peso"
+                    />
+                </div>
+                <div class="area-input">
+                    <img
+                        class="icon-input"
+                        src="./assets/icon-height.svg"
+                        alt="icon weight"
+                    />
+                    <input 
+                        id="height" 
+                        class="input-imc" 
+                        type="text"
+                        placeholder="Altura"
+                    />
+                </div>
+                <button>Calcular</button>
+            </form>
+        </main>
+
+        <script src="./script/main.js"></script>
     </body>
 </html>
