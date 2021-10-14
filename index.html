@@ -22,6 +22,24 @@
             <form id="form-inputs">
                 <div class="area-input">
                     <svg 
+                        id="icon-height"
+                        class="icon-svg"
+                        width="23" height="23" viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.2 3.96552C6.30457 3.96552 7.2 3.07781 7.2 1.98276C7.2 0.887711 6.30457 0 5.2 0C4.09543 0 3.2 0.887711 3.2 1.98276C3.2 3.07781 4.09543 3.96552 5.2 3.96552Z" fill="black"/>
+                        <path d="M0 4.75862V13.4828H1.6V6.34483H2.4V23H4.8V12.6897H5.6V23H8V6.34483H8.8V13.4828H10.4V4.75862H0Z" fill="black"/>
+                        <path d="M16 11.1034V10.3103H12.8V8.72414H14.4V7.93103H12.8V6.34483H14.4V5.55172H12.8V3.96552H14.4V3.17241H12.8V1.58621H14.4V0.793103H12.8V0H12V23H12.8V20.6207H14.4V19.8276H12.8V18.2414H14.4V17.4483H12.8V15.8621H14.4V15.069H12.8V13.4828H14.4V12.6897H12.8V11.1034H16Z" fill="black"/>
+                    </svg>
+
+                    <input 
+                        id="height" 
+                        class="input-imc" 
+                        type="text"
+                        placeholder="Altura"
+                    />
+                </div>
+
+                <div class="area-input">
+                    <svg 
                         id="icon-weight"
                         class="icon-svg"
                         width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,27 +60,16 @@
                     placeholder="Peso"
                     />
                 </div>
-                <div class="area-input">
-                    <svg 
-                        id="icon-height"
-                        class="icon-svg"
-                        width="23" height="23" viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.2 3.96552C6.30457 3.96552 7.2 3.07781 7.2 1.98276C7.2 0.887711 6.30457 0 5.2 0C4.09543 0 3.2 0.887711 3.2 1.98276C3.2 3.07781 4.09543 3.96552 5.2 3.96552Z" fill="black"/>
-                        <path d="M0 4.75862V13.4828H1.6V6.34483H2.4V23H4.8V12.6897H5.6V23H8V6.34483H8.8V13.4828H10.4V4.75862H0Z" fill="black"/>
-                        <path d="M16 11.1034V10.3103H12.8V8.72414H14.4V7.93103H12.8V6.34483H14.4V5.55172H12.8V3.96552H14.4V3.17241H12.8V1.58621H14.4V0.793103H12.8V0H12V23H12.8V20.6207H14.4V19.8276H12.8V18.2414H14.4V17.4483H12.8V15.8621H14.4V15.069H12.8V13.4828H14.4V12.6897H12.8V11.1034H16Z" fill="black"/>
-                    </svg>
-
-                    <input 
-                        id="height" 
-                        class="input-imc" 
-                        type="text"
-                        placeholder="Altura"
-                    />
-                </div>
-                <button id="calculate">Calcular</button>
+                <button 
+                    type="button" 
+                    id="calculate"
+                >Calcular</button>
             </form>
         </main>
 
-        <script src="./script/elementsPage.js"></script>
+        <script 
+            src="./script/main.js" 
+            type="module"
+        ></script>
     </body>
 </html>
