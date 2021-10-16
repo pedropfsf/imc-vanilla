@@ -17,7 +17,8 @@ form#form-inputs
 
 main#main,
 form#form-inputs,
-div.area-input
+div.area-input,
+div.position
 {
     display: flex;
     align-items: center;
@@ -28,6 +29,16 @@ div.position {
     position: absolute;
     right: 20px;
     top: 20px;
+
+    justify-content: center;
+}
+
+svg#icon-save-theme {
+    margin-right: 20px;
+}
+
+svg#icon-save-theme:hover {
+    transform: scale(1.2);
 }
 
 div.switch {

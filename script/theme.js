@@ -1,19 +1,33 @@
 import ButtonSwitch from './buttonSwitch.js';
 
-// class themeStyle extends ButtonSwitch {
-//     constructor(normal, light, dark) {
+class ThemeStyle extends ButtonSwitch {
+    constructor(button) {
+        super(button);
+        // this.color
+    }
 
-//     }
+    loadTheme() {
+        switch(this.value) {
+            default:
+            case "light":
+                console.log("light");
+                break;
+            case "dark":
+                console.log("dark");
+                break;
+        }
+    }
 
-//     loadTheme() {
+    // switchActionTheme({ type, action }) {
+    //     switch(type) {
+    //         default:
+    //         case "light":
+    //             action.light();
+    //             break;
+    //         case "dark":
+    //             action.dark();
+    //     }
+    // }
+}
 
-//     }
-// }
-
-// const switchTheme = new ButtonSwitch({
-//     elementCircle: circle,
-//     elementSwitch: switchElement,
-//     value: "light"
-// });
-
-// switchTheme.loadButton();
+export default ThemeStyle;
