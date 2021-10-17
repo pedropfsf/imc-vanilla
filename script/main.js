@@ -4,8 +4,7 @@ import {
     inputHeight,
     inputWeight,
     buttonCalculate,
-    textResult,
-    saveThemeButton
+    textResult
 } from './elementsPage.js';
 import IMC from './IMC.js';
 import ThemeStyle from './theme.js';
@@ -67,10 +66,7 @@ buttonCalculate.onclick = () => {
 
 const theme = new ThemeStyle({
     elementCircle: circle,
-    elementSwitch: switchElement,
-    elementSaveTheme: saveThemeButton
-    // value: "dark"
+    elementSwitch: switchElement
 });
 
 theme.loadButton();
-// theme.loadTheme();

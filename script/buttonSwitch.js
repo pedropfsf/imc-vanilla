@@ -1,15 +1,11 @@
 class ButtonSwitch {
     constructor({ 
         elementSwitch, 
-        elementCircle,
-        elementSaveTheme,
-        childNotification
+        elementCircle
     }) {
         this.elementSwitch = elementSwitch;
         this.elementCircle = elementCircle;
         this._value = window.localStorage.getItem('theme-imc') || "light";
-        this._themeStorage = window.localStorage.getItem('theme-imc') || "light";
-        this.elementSaveTheme = elementSaveTheme;
     }
 
     set value(value) {
@@ -19,54 +15,21 @@ class ButtonSwitch {
         return this._value
     }
 
-    set themeStorage(value) {
-        this._themeStorage = window.localStorage.setItem('theme-imc', value);
-    }
-    get themeStorage() {
-        return this._themeStorage;
-    }
-
     loadButton() {
         this.eventsClickButton();
+        this.renderButton();
     }
 
     eventsClickButton() {
         this.elementSwitch.addEventListener('click', () => {
             this.toggleThemeButton();
         }, true)
-        this.elementSaveTheme.addEventListener('click', () => {
-            this.saveThemeStorage();
-        }, true);
     }
     
     setTheme(value) {
-        this.value = value
+        window.localStorage.setItem('theme-imc', value);
+        this.value = window.localStorage.getItem('theme-imc');
         this.renderButton();
-    }
-
-    saveThemeStorage() {
-        this.themeStorage = this.value;
-
-        let timerAnimation;
-        this.elementSaveTheme.style.transform = "scale(1)";
-        clearTimeout(timerAnimation);
-        timerAnimation = setTimeout(() => {
-            this.elementSaveTheme.style.transform = "";
-        }, 250);
-
-        this.createNotificationThemeStorage();
-    }
-
-    createNotificationThemeStorage() {
-        function createArea() {
-            const area = window.document.createElement('div');
-            area.setAttribute('id', 'window-notification');
-            area.style.position = 'absolute';
-            area.style.right = '20px';
-            area.style.bottom = '20px';
-            body.appendChild(area);
-        }
-        
     }
 
     toggleThemeButton() {
