@@ -1,13 +1,16 @@
 import { 
     switchElement, 
     circle,
+    iconHeight,
     inputHeight,
+    iconWeight,
     inputWeight,
     buttonCalculate,
-    textResult
+    textResult,
+    title
 } from './elementsPage.js';
 import IMC from './IMC.js';
-import ThemeStyle from './theme.js';
+import ButtonSwitchStyle from './buttonSwitchStyle.js';
 
 const data = {
     weight: 0,
@@ -21,6 +24,42 @@ inputHeight.oninput = ({ target }) => {
 inputWeight.oninput = ({ target }) => {
     data.weight = target.value;
 }
+
+const arrayColors = [
+    {
+        name: "--under-weight-color",
+        colorDark: "var(--under-weight-color-dark)",
+        colorLight: "var(--under-weight-color-light)",
+    },
+    {
+        name: "--about-weight-color",
+        colorDark: "var(--about-weight-color-dark)",
+        colorLight: "var(--about-weight-color-light)",
+    },
+    {
+        name: "--normal-color",
+        colorDark: "var(--normal-color-dark)",
+        colorLight: "var(--normal-color-light)",
+    },
+    {
+        name: "--obesity-color",
+        colorDark: "var(--obesity-color-dark)",
+        colorLight: "var(--obesity-color-light)",
+    },
+    {
+        name: "--severe-obesity-color",
+        colorDark: "var(--severe-obesity-color-dark)",
+        colorLight: "var(--severe-obesity-color-light)",
+    },
+]
+
+const theme = new ButtonSwitchStyle(arrayColors, {
+    elementCircle: circle,
+    elementSwitch: switchElement,
+    
+});
+
+theme.loadButton();
 
 buttonCalculate.onclick = () => {
     const imc = new IMC(data);
@@ -64,9 +103,6 @@ buttonCalculate.onclick = () => {
     textResult.innerText = `${result} ${typeResult}`;
 }
 
-const theme = new ThemeStyle({
-    elementCircle: circle,
-    elementSwitch: switchElement
-});
-
-theme.loadButton();
+console.log(iconHeight);
+console.log(iconWeight);
+console.log(title);
