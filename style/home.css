@@ -1,0 +1,134 @@
+body {
+    background-color: var(--gray-light);
+}
+
+main#main {
+    
+    width: 100%;
+    height: 100vh;
+}
+
+main#main,
+form#form-inputs
+{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main#main,
+form#form-inputs,
+div.area-input,
+div.position
+{
+    display: flex;
+    align-items: center;
+}
+
+
+div.position {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    justify-content: center;
+}
+
+svg#icon-save-theme {
+    margin-right: 20px;
+}
+
+svg#icon-save-theme:hover {
+    transform: scale(1.2);
+}
+
+div.switch {
+    width: 64px;
+    height: 32px;
+
+    background-color: var(--gray);
+
+    border-radius: 20px;
+    
+    position: relative;
+}
+
+div.circle {
+    width: 42px;
+    height: 42px;
+
+    background-color: var(--light);
+
+    border-radius: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 20%; /* Left */
+    /* left: 80%; Right */
+    transform: translate(-50%, -50%);
+}
+
+h1#title {
+    font-size: 30px;
+}
+
+span#text-result {
+    font-size: 50px;
+}
+
+div.area-input {
+    
+    background-color: var(--gray);
+    
+    justify-content: space-evenly;
+}
+
+div.area-input,
+button#calculate
+{
+    width: 252px;
+    height: 46px;
+}
+
+svg.icon-svg {
+    width: 20px;
+    height: 20px;
+}
+
+svg#icon-weight {
+    margin-right: 2px;
+}
+
+input.input-imc {
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+    
+    width: 200px;
+}
+
+input.input-imc::placeholder {
+    color: var(--dark-alpha);
+}
+
+input.input-imc,
+button#calculate
+{
+    font-size: 15px;
+}
+
+button#calculate,
+div.area-input
+{
+    margin: 5px;
+}
+
+button#calculate {
+    outline: none;
+    
+    box-shadow: none;
+    
+    border: none;
+
+    background-color: var(--gray);
+}
