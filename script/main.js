@@ -63,7 +63,20 @@ const theme = new ButtonSwitchStyle(arrayColors, {
 theme.loadButton();
 theme.setStyleTheme(0);
 
-buttonCalculate.onclick = () => {
+const MILISECONDSANIMATION = 350;
+let timer;
+
+buttonCalculate.onclick = ({ target }) => {
+    console.log(target);
+
+    target.style.animationName = "click";
+    target.style.animationDuration = `${MILISECONDSANIMATION}ms`;
+
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+        target.style.animationName = "";
+    }, MILISECONDSANIMATION + 50);
+
     const imc = new IMC(data);
     const result = imc.calculateResult().toFixed(1);
     let typeResult = "";
@@ -100,7 +113,7 @@ buttonCalculate.onclick = () => {
         severeObesity: () => {
             if (result >= 40.0){
                 typeResult = "Obesidade Grave";
-                
+
                 theme.setStyleTheme(result);
             }
         }
