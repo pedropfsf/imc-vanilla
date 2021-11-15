@@ -8,5 +8,3 @@ class IMC {
         return this.weight / (this.height * this.height);
     }
 }
-
-export default IMC;

@@ -1,21 +1,12 @@
-import { 
-    switchElement, 
-    circle,
-    iconHeight,
-    inputHeight,
-    iconWeight,
-    inputWeight,
-    buttonCalculate,
-    textResult,
-    title
-} from './elementsPage.js';
-import IMC from './IMC.js';
-import ButtonSwitchStyle from './buttonSwitchStyle.js';
-
 const data = {
     weight: 0,
     height: 0
 };
+
+const [ inputAreaHeight, inputAreaWeight ] = inputs;
+
+const inputHeight = inputAreaHeight.children[1];
+const inputWeight = inputAreaWeight.children[1];
 
 inputHeight.oninput = ({ target }) => {
     data.height = target.value;
@@ -28,38 +19,49 @@ inputWeight.oninput = ({ target }) => {
 const arrayColors = [
     {
         name: "--under-weight-color",
-        colorDark: "var(--under-weight-color-dark)",
-        colorLight: "var(--under-weight-color-light)",
-    },
-    {
-        name: "--about-weight-color",
-        colorDark: "var(--about-weight-color-dark)",
-        colorLight: "var(--about-weight-color-light)",
+        dark: "var(--under-weight-color-dark)",
+        light: "var(--under-weight-color-light)",
     },
     {
         name: "--normal-color",
-        colorDark: "var(--normal-color-dark)",
-        colorLight: "var(--normal-color-light)",
+        dark: "var(--normal-color-dark)",
+        light: "var(--normal-color-light)",
+    },
+    {
+        name: "--about-weight-color",
+        dark: "var(--about-weight-color-dark)",
+        light: "var(--about-weight-color-light)",
     },
     {
         name: "--obesity-color",
-        colorDark: "var(--obesity-color-dark)",
-        colorLight: "var(--obesity-color-light)",
+        dark: "var(--obesity-color-dark)",
+        light: "var(--obesity-color-light)",
     },
     {
         name: "--severe-obesity-color",
-        colorDark: "var(--severe-obesity-color-dark)",
-        colorLight: "var(--severe-obesity-color-light)",
+        dark: "var(--severe-obesity-color-dark)",
+        light: "var(--severe-obesity-color-light)",
     },
 ]
 
 const theme = new ButtonSwitchStyle(arrayColors, {
     elementCircle: circle,
     elementSwitch: switchElement,
-    
+    texts: [
+        textResult,
+        title
+    ],
+    areaInputs: inputs,
+    svgs: [
+        iconWeight,
+        iconHeight
+    ],
+    button: buttonCalculate,
+    main
 });
 
 theme.loadButton();
+theme.setStyleTheme(0);
 
 buttonCalculate.onclick = () => {
     const imc = new IMC(data);
@@ -70,26 +72,36 @@ buttonCalculate.onclick = () => {
         thinness: () => {
             if(result < 18.5) {
                 typeResult = "Magreza";
+
+                theme.setStyleTheme(result);
             }
         },
         normal: () => {
             if(result >= 18.5 && result <= 24.9) {
                 typeResult = "Normal";
+
+                theme.setStyleTheme(result);
             }
         },
         overWeight: () => {
             if(result >= 25.0 && result <= 29.9) {
                 typeResult = "Sobrepeso";
+
+                theme.setStyleTheme(result);
             }
         },
         obesity: () => {
             if(result >= 30.0 && result <= 39.9) {
-                typeResult = "Obesidade;"
+                typeResult = "Obesidade";
+
+                theme.setStyleTheme(result);
             }
         },
         severeObesity: () => {
             if (result >= 40.0){
-                typeResult = "Obesidade Grave"
+                typeResult = "Obesidade Grave";
+                
+                theme.setStyleTheme(result);
             }
         }
     }
@@ -103,6 +115,4 @@ buttonCalculate.onclick = () => {
     textResult.innerText = `${result} ${typeResult}`;
 }
 
-console.log(iconHeight);
-console.log(iconWeight);
-console.log(title);
+console.log(theme);

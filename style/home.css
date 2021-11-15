@@ -111,6 +111,55 @@ input.input-imc::placeholder {
     color: var(--dark-alpha);
 }
 
+input.placeholder-default::placeholder {
+    color: var(--dark-alpha);
+}
+
+input.placeholder-dark-underWeight::placeholder {
+    color: var(--under-weight-placerholder-dark);
+}
+
+input.placeholder-light-underWeight::placeholder {
+    color: var(--under-weight-placerholder-light);
+}
+
+
+input.placeholder-dark-aboutWeight::placeholder {
+    color: var(--about-weight-placerholder-dark);
+}
+
+input.placeholder-light-aboutWeight::placeholder {
+    color: var(--about-weight-placerholder-light);
+}
+
+
+input.placeholder-dark-normal::placeholder {
+    color: var(--normal-placerholder-dark);
+}
+
+input.placeholder-light-normal::placeholder {
+    color: var(--normal-placerholder-light);
+}
+
+
+input.placeholder-dark-obesity::placeholder {
+    color: var(--obesity-placerholder-dark);
+}
+
+input.placeholder-light-obesity::placeholder {
+    color: var(--obesity-placerholder-light);
+}
+
+
+input.placeholder-dark-severeObesity::placeholder {
+    color: var(--severe-obesity-placerholder-dark);
+}
+
+input.placeholder-light-severeObesity::placeholder {
+    color: var(--severe-obesity-placerholder-light);
+}
+
+
 input.input-imc,
 button#calculate
 {

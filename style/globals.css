@@ -20,12 +20,28 @@
     --obesity-color-light: #FCE9D9 ;
     --severe-obesity-color-light: #FCD4D7;
 
+    /* Color indexes Dark for placeholder */
+    --under-weight-placerholder-dark: rgba(38, 111, 140, 0.3);
+    --about-weight-placerholder-dark: rgba(90, 75, 2, 0.3);
+    --normal-placerholder-dark: rgba(13, 64, 49, 0.3);
+    --obesity-placerholder-dark: rgba(152, 77, 11, 0.3);
+    --severe-obesity-placerholder-dark: rgba(148, 10, 21, 0.3);
+
+    /* Color indexes Light  */
+    --under-weight-placerholder-light: rgba(235, 245, 250, 0.3);
+    --about-weight-placerholder-light: rgba(253, 235, 145, 0.3);
+    --normal-placerholder-light: rgba(149, 234, 210, 0.3);
+    --obesity-placerholder-light: rgba(252, 233, 217, 0.3);
+    --severe-obesity-placerholder-light: rgba(252, 212, 215, 0.3);
+
     /* Color Default */
     --gray-light: #F2F2F2;
     --dark-alpha: rgba(0, 0, 0, 0.5);
     --gray: #C4C4C4;
     --dark: #000000;
     --light: #ffffff;
+    --texts: #4F4F4F;
+    --light-alpha: rgba(255, 255, 255, 0.5);
 }
 
 * {

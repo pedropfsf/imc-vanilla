@@ -1,14 +1,21 @@
-// Elements for SwitchButtonTheme
-export const switchElement = window.document.querySelector("div.switch");
-export const circle = window.document.querySelector("div.circle");
+// Elements of interface global
+const main = window.document.querySelector("main#main");
 
-// Elements for form IMC
-export const iconWeight = window.document.querySelector("svg#icon-weight");
-export const inputWeight = window.document.querySelector("input#weight");
-export const iconHeight = window.document.querySelector("svg#icon-height");
-export const inputHeight = window.document.querySelector("input#height");
-export const buttonCalculate = window.document.querySelector("button#calculate");
 
-// Elements for result IMC
-export const textResult = window.document.querySelector("span#text-result");
-export const title = window.document.querySelector("h1#title");
+// Elements of SwitchButtonTheme
+const switchElement = window.document.querySelector("div.switch");
+const circle = window.document.querySelector("div.circle");
+
+
+// Elements of form IMC
+const iconWeight = window.document.querySelector("svg#icon-weight");
+const iconHeight = window.document.querySelector("svg#icon-height");
+
+const inputs = window.document.querySelectorAll("div.area-input");
+
+const buttonCalculate = window.document.querySelector("button#calculate");
+
+
+// Elements of result IMC
+const textResult = window.document.querySelector("span#text-result");
+const title = window.document.querySelector("h1#title");
