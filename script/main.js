@@ -82,6 +82,14 @@ buttonCalculate.onclick = ({ target }) => {
     let typeResult = "";
 
     const conditionalsIMC = {
+        default: () => {
+            if(result < 1) {
+                typeResult = "Nenhum valor";
+
+                theme.setStyleTheme(result);
+            }
+        },
+
         thinness: () => {
             if(result < 18.5) {
                 typeResult = "Magreza";
@@ -119,6 +127,7 @@ buttonCalculate.onclick = ({ target }) => {
         }
     }
 
+    conditionalsIMC.default();
     conditionalsIMC.thinness();
     conditionalsIMC.normal();
     conditionalsIMC.overWeight();

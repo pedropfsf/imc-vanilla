@@ -170,6 +170,8 @@ button#calculate,
 div.area-input
 {
     margin: 5px;
+
+    border-radius: 5px;
 }
 
 button#calculate {

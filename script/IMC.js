@@ -1,10 +1,16 @@
 class IMC {
-    constructor({ weight, height }) {
+    constructor({ weight = 0, height = 0 }) {
         this.weight = weight;
         this.height = height;
     }
 
     calculateResult() {
-        return this.weight / (this.height * this.height);
+        let result = this.weight / (this.height * this.height);
+        if(isNaN(result)) {
+            result = 0;
+        }
+        console.log(result);
+
+        return result;
     }
 }

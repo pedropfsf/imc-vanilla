@@ -109,7 +109,7 @@ class ButtonSwitchStyle {
             obesityAction,
             severeObesityAction
         }) {
-            if(imc === 0) {
+            if(imc < 1) {
                 defaultAction();
             } else if(imc < 18.5) {
                 underWeightAction();
