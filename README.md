@@ -16,8 +16,7 @@
 </h4>
 
 ## Sobre
-Esse projeto fiz para treinar transições e animações, para tornar a interface mais agradável de usar, escolhi imc para treinar minha lógica de programação
-isso enquanto desenvolvia ele, o projeto está livre para modificações e entre outras coisas, sugestões são bem vindo e criticas construtivas também, fique livre para desfrutar do meu software
+Esse projeto fiz para treinar transições e animações para tornar a interface mais agradável de usar, escolhi imc para treinar minha lógica de programação, o projeto está livre para modificações e entre outras coisas, sugestões são bem vindo e criticas construtivas também, fique livre para desfrutar do meu software
 
 ## Pre Requisitos
 Você precisa apenas de um editor de código e obviamente de um navegador, recomendo usar o google chrome
