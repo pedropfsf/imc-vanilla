@@ -22,10 +22,14 @@ Esse projeto fiz para treinar transições e animações para tornar a interface
 Você precisa apenas de um editor de código e obviamente de um navegador, recomendo usar o google chrome
 
 # Copie e cole no seu GIT
-$ git clone https://github.com/Pyedrown/imc-vanilla
+```
+git clone https://github.com/Pyedrown/imc-vanilla
+```
 
 # e em seguida use
-$ cd imc-vanilla
+```
+cd imc-vanilla
+```
 
 # Clique no index.html para começar a usar-lo
 
