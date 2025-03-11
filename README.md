@@ -1,7 +1,7 @@
 <h1 align="center">Projeto IMC</h1>
 
 <div align="center">
-  <img src="https://github.com/Pyedrown/imc-vanilla/blob/main/presentation/Projeto%20imc.gif" alt="image"/>
+  <img src="https://github.com/user-attachments/assets/5848e327-4b90-4af9-adc1-3e341c4da2fc" alt="image"/>
 </div>
 
 
